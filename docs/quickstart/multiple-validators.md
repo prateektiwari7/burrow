@@ -92,8 +92,10 @@ Configure second node to persistently connect to the first node.
 
 ```bash
 NODE_0_URL=`curl -s 127.0.0.1:20001/network | jq -r '.result.ThisNode | [.ID, .ListenAddress] | join("@") | ascii_downcase'`
+echo $NODE_0_URL 
 sed -i s%PUT_HERE_NODE_0_ID@LISTEN_EXTERNAL_ADDRESS%${NODE_0_URL}% .burrow_val1.toml
 ```
+Place $NODE_0_URL into the .burrow_val1.toml file in PersistentPeers = "output_of_NODE_0_URL"
 
 #### Start the second node
 

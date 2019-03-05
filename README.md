@@ -32,7 +32,7 @@ Project information generally updated on a quarterly basis can be found on the [
 ## Minimum requirements
 
 Requirement|Notes
----|---
+---|--- 
 Go version | Go1.10 or higher
 
 ## Installation
